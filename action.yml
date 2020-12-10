@@ -1,0 +1,31 @@
+name: "GitHub Deployment's"
+description: "GitHub Deployment from GitHub Actions"
+author: "Codemonkey51"
+inputs:
+  status:
+    description: "Status for the deployment"
+    default: "pending"
+    required: false
+  refrence:
+    description: "The reference for the deployment"
+    required: false
+  token:
+    description: "Github access token"
+    defualt: ${{ github.secret }}
+    required: false
+  url:
+    description: "Url of deployment"
+    required: false
+  description:
+    description: "Message describing the deployment"
+    required: false
+  environment_name:
+    description: "The evironment name of the deployment"
+    default: "production"
+    required: false
+outputs:
+  id:
+    description: "The ID of the deployment"
+runs:
+  using: "node12"
+  main: "src/index.js"
