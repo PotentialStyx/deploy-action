@@ -6,6 +6,14 @@ inputs:
     description: "Status for the deployment"
     default: "pending"
     required: false
+  update_status:
+    description: "Only update the status of a past deploy"
+    default: false
+    required: false
+  deploy_id:
+    description: "The status to update (if update_status is set)"
+    default: "null"
+    required: false
   refrence:
     description: "The reference for the deployment"
     required: false
